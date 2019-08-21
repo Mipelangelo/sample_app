@@ -11,8 +11,12 @@
   <body>
     <%= render 'layouts/headernew' %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, clas: "alert alert-#{message_type}")%>
+      <% end %>
       <%= yield %>
       <%= render 'layouts/footernew' %>
+      <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
 </html>
