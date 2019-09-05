@@ -21,7 +21,7 @@ end
   # Add more helper methods to be used by all tests here...
 end
 
-class ActtionDispatch::IntegrationTest
+class ActionDispatch::IntegrationTest
 
   # Log in as a particular user
   def log_in_as(user,passord: 'password', remember_me: '1')
@@ -29,4 +29,4 @@ class ActtionDispatch::IntegrationTest
                                         password: password,
                                         remember_me: remember_me}}
   end
-end 
+end

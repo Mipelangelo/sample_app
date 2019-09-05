@@ -10,7 +10,7 @@ test "layout links" do
   assert_select "a[href=?]", about_path
   assert_select "a[href=?]", newpage_path
   get newpage_path
-  assert_select "title", fll_title("NewPage")
+  assert_select "title", full_title("NewPage")
 end
 
 class ApplicationHelperTest < ActionView::TestCase
@@ -21,4 +21,4 @@ class ApplicationHelperTest < ActionView::TestCase
 
 end
 
-end 
+end
